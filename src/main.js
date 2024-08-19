@@ -1,6 +1,9 @@
-import './assets/main.css'
+import { createApp } from "vue"
+import App from "./App.vue"
+// default import ができるように自動でvueファイルからjsに変換している．
+// vueファイルを使用するときはdefault importを使用する．
 
-import { createApp } from 'vue'
-import App from './App.vue'
+console.log(App) // 実はオブジェクトになる(余談)
 
-createApp(App).mount('#app')
+const app = createApp(App) // Appコンポーネントを基に，UIを生成．
+app.mount("#app") // インターフェースを#appに表示．指定方法はcssセレクタと同様．
